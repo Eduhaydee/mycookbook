@@ -2,7 +2,7 @@
 <p>Bem-vindo ao maior livro de receitas online</p>
 
 <% @recipes.each do |recipe| %>
-  <h3><%= recipe.title %></h3>
+  <h3><%= link_to recipe.title, recipe %></h3>
   <ul>
     <li><%= recipe.recipe_type %></li>
     <li><%= recipe.cuisine %></li>
