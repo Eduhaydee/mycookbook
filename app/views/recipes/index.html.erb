@@ -1,11 +1,13 @@
 <%= link_to 'Home', root_path, class: 'nav-link' %>
 <%= link_to 'Enviar uma receita', new_recipe_path, class: 'nav-link' %>
+<%= link_to 'Cadastrar tipo de receita', new_recipe_type_path, class: 'nav-link' %>
+
 <h1>CookBook</h1>
 <p>Bem-vindo ao maior livro de receitas online</p>
 <% @recipes.each do |recipe| %>
   <h2><%= link_to recipe.title, recipe %></h2>
   <ul>
-    <li><%= recipe.recipe_type %></li>
+    <li><%= recipe.recipe_type.name %></li>
     <li><%= recipe.cuisine %></li>
     <li><%= recipe.difficulty %></li>
     <li><%= recipe.cook_time_min %></li>
