@@ -13,7 +13,5 @@
 <p><%= @recipe.cook_method %></p>
 
 <%= link_to 'Editar', edit_recipe_path, class: 'btn btn-primary' %>
-<%= link_to "Excluir", recipe_path(@recipe), data: {
-      confirm: "Are you sure you want to delete?"
-    }, method: :delete, class: 'btn btn-primary' %>
+<%= link_to "Excluir", recipe_path(@recipe), method: :delete, class: 'btn btn-primary' %>
 <%= link_to 'Voltar', root_path, class: 'btn btn-secondary' %>
